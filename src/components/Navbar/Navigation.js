@@ -12,12 +12,11 @@ function Navigation() {
 }, 0);
     return (
       <div>
-        <Navbar bg="light">
+        <Navbar bg="light" expand="md">
         <Container >
           <Navbar.Brand>Wiki</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
-  
           <Form className="d-flex">
               <FormControl
                 type="search"
@@ -29,6 +28,7 @@ function Navigation() {
                 <i class="fa fa-search" aria-hidden="true"></i>
               </Button>
             </Form>
+  
             <Nav className="me-auto ">
               
               <Link className="nav-link" to="/productos">
