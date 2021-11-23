@@ -25,7 +25,7 @@ function Navigation() {
                 aria-label="Search"
               />
               <Button variant="outline-success">
-                <i class="fa fa-search" aria-hidden="true"></i>
+                <i className="fa fa-search" aria-hidden="true"></i>
               </Button>
             </Form>
   

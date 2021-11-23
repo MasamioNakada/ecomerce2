@@ -59,9 +59,9 @@ export default function CarritoView() {
             </table>
             <div className="d-flex justify-content-end">
               
-              <button className="btn btn-outline-success btn-lg me-3">Comprar</button>
+              <button className="btn btn-outline-success btn-lg m-2">Comprar</button>
               <button
-                className="btn btn-outline-danger btn-lg "
+                className="btn btn-outline-danger btn-lg m-2"
                 onClick={manejarLimpiarCarrito}
               >
                 Limpiar Carrito

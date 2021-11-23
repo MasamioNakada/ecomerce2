@@ -100,7 +100,7 @@ const ProductoComprarView = () => {
               </button>
            
             <button className="btn btn-outline-success px-4 py-2 ms-3 ">
-              Comprar
+              Comprar Ya!
             </button>
           </div>
         </div>

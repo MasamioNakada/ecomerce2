@@ -41,7 +41,7 @@ export default function ProductoCard({item}) {
                 </div>
                 <div>
                   <Link to={`/detalleproducto/${id}`} className="btn btn-outline-info">
-                    Ver
+                      Comprar
                   </Link>
                   <button
                     className="btn btn-outline-dark mx-2 m-md-2"
