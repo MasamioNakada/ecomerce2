@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ProductoComprarView from "./views/ProductoComprarView";
 import Navigation from "./components/Navbar/Navigation";
 import CarritoView from "./views/CarritoView";
+import NotFoundView from "./views/NotFoundView";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Router>
         <Navigation />
         <Routes>
+          <Route path="*" element={<NotFoundView />} />
           <Route path="/carrito" element={<CarritoView />} />
           <Route path="/productos" element={<ProductosListaView />} />
           <Route

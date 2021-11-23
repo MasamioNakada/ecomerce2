@@ -4,6 +4,7 @@ export const CarritoContext = createContext();
 
 const CarritoContextProvider = ({ children }) => {
   const [carrito, setCarrito] = useState([]);
+
   const anadirCarrito = (nuevoProducto) => {
     const existe = carrito.findIndex((prod) => prod.id === nuevoProducto.id);
     if (existe === -1) {
@@ -17,12 +18,23 @@ const CarritoContextProvider = ({ children }) => {
   };
   const limpiarCarrito = () => {
     setCarrito([]);
-};
+  };
+  useEffect(() => {
+    const carritoStorage = JSON.parse(localStorage.getItem("carritoApp"));
+    if (carritoStorage.length > 0) {
+      setCarrito(carritoStorage);
+    }
+  }, []);
+
+  //2. Pero cada vez que cambie carrito, guardaremos la información en el localStorage
+  useEffect(() => {
+    localStorage.setItem("carritoApp", JSON.stringify(carrito));
+  }, [carrito]);
 
   return (
-    <CarritoContext.Provider value={{ carrito, anadirCarrito,limpiarCarrito }}>
+    <CarritoContext.Provider value={{ carrito, anadirCarrito, limpiarCarrito }}>
       {children}
     </CarritoContext.Provider>
   );
 };
-export default CarritoContextProvider
+export default CarritoContextProvider;
