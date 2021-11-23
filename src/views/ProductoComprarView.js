@@ -4,6 +4,7 @@ import { useParams } from "react-router";
 import { obtenerProductoPorId } from "../service/DataService";
 import ReactImageMagnify from "react-image-magnify";
 import { CarritoContext } from "../context/carritoContext";
+import "../css/VistaProduct.css"
 const ProductoComprarView = () => {
   const [producto, setProducto] = useState(null);
   const [cantidad, setCantidad] = useState(1);
@@ -64,7 +65,7 @@ const ProductoComprarView = () => {
               }}
             />
           </div>
-          <div className="col-sm-12 col-lg-4">
+          <div className="col-sm-12 col-lg-4 text-sm-center ">
             <h4 className="text-uppercase text-black-50">
               {producto.descripcion}
             </h4>
@@ -72,7 +73,7 @@ const ProductoComprarView = () => {
 
             <h3 className="fw-bold ">S/ {producto.precio}</h3>
             <p className="lead">Adquierelo con un Click</p>
-            <div className="d-flex">
+            <div className="d-flex justify-content-center " id="informacion">
               <button
                 className="btn btn-dark"
                 onClick={() => {
@@ -92,7 +93,7 @@ const ProductoComprarView = () => {
               </button>
             </div>
               <button
-                className="btn btn-outline-dark px-4 py-2 my-2"
+                className="btn btn-outline-dark px-4 py-2 my-2 "
                onClick={anadirCarritoContext}
               >
                 <i className="fas fa-cart-plus"></i> Agregar a carrito
