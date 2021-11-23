@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
+import ProductosListaView from "./views/ProductosListaView";
+import CarritoContextProvider from "./context/carritoContext";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import ProductoComprarView from "./views/ProductoComprarView";
+import Navigation from "./components/Navbar/Navigation";
+import CarritoView from "./views/CarritoView";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <CarritoContextProvider>
+      <Router>
+        <Navigation />
+        <Routes>
+          <Route path="/carrito" element={<CarritoView />} />
+          <Route path="/productos" element={<ProductosListaView />} />
+          <Route
+            path="/detalleproducto/:id"
+            element={<ProductoComprarView />}
+          />
+        </Routes>
+      </Router>
+    </CarritoContextProvider>
   );
 }
 
