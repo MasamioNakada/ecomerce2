@@ -1,7 +1,7 @@
 import axios from "axios";
 
 //esta url e de mocp api
-const URL = `${process.env.REACT_APP_API}Productos`;
+const URL = "https://616b5ec016c3fa0017171694.mockapi.io/Productos";
 
 const LaData = async () => {
   try {
