@@ -121,7 +121,7 @@ export default function LoginView() {
           </p>
         </div>
       </form>
-      <div className="col-lg-12   text-center  ">
+      <div className="col-lg-12 mb-5  text-center  ">
         <button
           className="btn btn-outline-danger btn-lg my-2"
           onClick={submitGoogle}

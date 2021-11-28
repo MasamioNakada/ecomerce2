@@ -11,12 +11,13 @@ import NotFoundView from "./views/NotFoundView";
 
 import AuthProvider from "./context/AuthContext";
 import PrivateRoute from "./components/PrivateRoute";
-import Boleta from "./views/Boleta";
+
 import LoginView from "./views/LoginView";
 import RegisterView from "./views/RegisterView";
 import { useContext } from "react";
 import RutaPrivadaUser from "./components/RutaPrivadaUser";
 import ContrasenaView from "./views/ContrasenaView";
+import CheckOutView from "./views/CheckOutView";
 
 
 
@@ -40,7 +41,7 @@ function App() {
             />
             <Route path="/checkout" element={
               
-                <Boleta/>
+                <CheckOutView/>
               
             }/>
             <Route path="/login" element={

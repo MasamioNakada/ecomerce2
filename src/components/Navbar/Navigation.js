@@ -91,7 +91,7 @@ function Navigation() {
                 )}
               </Link>
               <Link className="nav-link" to="/checkout">
-                Caja
+                CheckOut
               </Link>
             </Nav>
 
