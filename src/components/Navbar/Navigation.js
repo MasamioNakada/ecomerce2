@@ -39,7 +39,7 @@ function Navigation() {
           Swal.fire({
             position: 'center',
             icon: 'success',
-            title: 'Seccion cerrada',
+            title: 'Vuelva pronto ' + '😎',
             showConfirmButton: false,
             timer: 1500
           })

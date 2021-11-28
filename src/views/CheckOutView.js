@@ -47,7 +47,7 @@ export default function CheckOutView() {
         Swal.fire({
           icon: "error",
           title: "Oops...",
-          text: "Necesitas estar logueado!",
+          text: "Debes iniciar sesion para continuar 🥺!",
           footer: 'Te recomendamos ver las politicas de privacidad',
         });
         navigate("/Login");
@@ -96,7 +96,7 @@ export default function CheckOutView() {
         <div className="col-12 col-md-6">
           <form onSubmit={handleSubmit(recibirSubmit)}>
             <div className="mb-2">{
-            currentUser === null ? (<h4 className="text-warning">'Recuerda que debes iniciar sesion para efectuar la comprar'</h4>) : ""}
+            currentUser === null ? (<h5 className="text-danger fs-6">'Inicia sesion para efectuar la compra'</h5>) : ""}
               <label className="form-label">Nombres y Apellidos</label>
               <input
                 type="text"
