@@ -67,15 +67,6 @@ export default function LoginView() {
       <div clasName="d-flex align-items-center ">
         <h1 className="text-center mb-2">Acceder</h1>
       </div>
-      <div className="col-lg-12   text-center  ">
-
-      <button
-        className="btn btn-outline-danger btn-lg my-2"
-        onClick={submitGoogle}
-      >
-        Ingresar con Google
-      </button>
-      </div>
 
       <form onSubmit={handleSubmit} className="col-lg-3 col-md-6 col-9  ">
         <div class="col-lg-12">
@@ -129,6 +120,14 @@ export default function LoginView() {
           </p>
         </div>
       </form>
+      <div className="col-lg-12   text-center  ">
+        <button
+          className="btn btn-outline-danger btn-lg my-2"
+          onClick={submitGoogle}
+        >
+          Ingresar con Google
+        </button>
+      </div>
     </div>
   );
 }
