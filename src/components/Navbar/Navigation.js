@@ -73,12 +73,13 @@ function Navigation() {
             </Form>
 
             <Nav className="me-auto ">
+            <Link className="nav-link" to="/home">
+                Home
+              </Link>
               <Link className="nav-link" to="/productos">
                 Productos
               </Link>
-              <Link className="nav-link" to="/about">
-                About
-              </Link>
+             
               
               <Link className="nav-link" to="/carrito">
                 Carrito
