@@ -33,7 +33,7 @@ export default function RegisterView() {
         showConfirmButton: false, //es para que no me muestre un boton de cierre
         timer: 2000, //ms
       });
-      navigate("/login")
+      navigate("/login");
     } catch (error) {
       console.log(error);
       await Swal.fire({
@@ -49,61 +49,66 @@ export default function RegisterView() {
   }
 
   return (
-    <div className="row mt-3 d-flex justify-content-center mt-5">
-      <div>
-      <h1 className="text-center">Registrar</h1>
-      </div> 
+    <div className="container">
+      <div className="row mt-3 d-flex justify-content-center mt-5">
+        <div>
+          <h1 className="text-center">Registrar</h1>
+        </div>
 
-      <form onSubmit={handleSubmit} className="col-lg-3 col-md-6 col-9  mt-3 ">
-        <div class="col-lg-12">
-          <label for="inputEmail4" class="form-label">
-            Email
-          </label>
-          <input
-            type="email"
-            name="email"
-            class="form-control"
-            id="inputEmail4  "
-            placeholder="Ingrese email"
-            value={form.email}
-            onChange={handleChange}
-            autoComplete="off"
-          />
-        </div>
-        <div class="col-lg-12 ">
-          <label for="inputPassword4" name="password" class="form-label">
-            Password
-          </label>
-          <input
-            type="password"
-            name="password"
-            class="form-control"
-            id="inputPassword4"
-            placeholder="Ingrese su contraseña"
-            value={form.password}
-            onChange={handleChange}
-            autoComplete="off"
-            required
-          />
-        </div>
-        {/* sadadasdasdad */}
+        <form
+          onSubmit={handleSubmit}
+          className="col-lg-3 col-md-6 col-9  mt-3 "
+        >
+          <div class="col-lg-12">
+            <label for="inputEmail4" class="form-label">
+              Email
+            </label>
+            <input
+              type="email"
+              name="email"
+              class="form-control"
+              id="inputEmail4  "
+              placeholder="Ingrese email"
+              value={form.email}
+              onChange={handleChange}
+              autoComplete="off"
+            />
+          </div>
+          <div class="col-lg-12 ">
+            <label for="inputPassword4" name="password" class="form-label">
+              Password
+            </label>
+            <input
+              type="password"
+              name="password"
+              class="form-control"
+              id="inputPassword4"
+              placeholder="Ingrese su contraseña"
+              value={form.password}
+              onChange={handleChange}
+              autoComplete="off"
+              required
+            />
+          </div>
+          {/* sadadasdasdad */}
 
-        <div className="col-lg-12  mt-3 text-center border">
-          <button
-            type="submit"
-            className="btn btn-outline-warning   mt-3"
-            disabled={loading}
-          >
-            Registrarse
-          </button>
-          <p>
-            Ya tienes cuenta?{" "}
-            <Link to="/login">
-              <span>Inicia Sesión</span>
-            </Link>
-          </p>
-        </div>
-      </form>
+          <div className="col-lg-12  mt-3 text-center border">
+            <button
+              type="submit"
+              className="btn btn-outline-warning   mt-3"
+              disabled={loading}
+            >
+              Registrarse
+            </button>
+            <p>
+              Ya tienes cuenta?{" "}
+              <Link to="/login">
+                <span>Inicia Sesión</span>
+              </Link>
+            </p>
+          </div>
+        </form>
+      </div>
     </div>
   );
 }

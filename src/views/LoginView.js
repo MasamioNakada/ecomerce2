@@ -63,7 +63,8 @@ export default function LoginView() {
   // // const aceptar = existe(form.email)
 
   return (
-    <div className="row d-flex justify-content-center mt-5">
+    <div className="container">
+    <div className="row d-flex justify-content-center mt-5" maxW>
       <div clasName="d-flex align-items-center ">
         <h1 className="text-center mb-2">Acceder</h1>
       </div>
@@ -128,6 +129,7 @@ export default function LoginView() {
           Ingresar con Google
         </button>
       </div>
+    </div>
     </div>
   );
 }
