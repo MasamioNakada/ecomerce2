@@ -1,6 +1,9 @@
 import { useContext } from "react";
 import { CarritoContext } from "../context/carritoContext";
 import Swal from "sweetalert2";
+
+import { Link } from "react-router-dom";
+
 export default function CarritoView() {
   const { carrito, limpiarCarrito } = useContext(CarritoContext);
 
@@ -58,8 +61,10 @@ export default function CarritoView() {
               </tbody>
             </table>
             <div className="d-flex justify-content-end">
-              
-              <button className="btn btn-outline-success btn-lg m-2">Comprar</button>
+              <Link to="/checkout" className="btn btn-outline-success btn-lg m-2">
+              Comprar
+              </Link>
+            
               <button
                 className="btn btn-outline-danger btn-lg m-2"
                 onClick={manejarLimpiarCarrito}
