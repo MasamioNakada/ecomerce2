@@ -1,4 +1,4 @@
-import logo from "./logo.svg";
+
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import ProductosListaView from "./views/ProductosListaView";
@@ -9,22 +9,53 @@ import Navigation from "./components/Navbar/Navigation";
 import CarritoView from "./views/CarritoView";
 import NotFoundView from "./views/NotFoundView";
 
+import AuthProvider from "./context/AuthContext";
+import PrivateRoute from "./components/PrivateRoute";
+import Boleta from "./views/Boleta";
+import LoginView from "./views/LoginView";
+import RegisterView from "./views/RegisterView";
+import { useContext } from "react";
+import RutaPrivadaUser from "./components/RutaPrivadaUser";
+import ContrasenaView from "./views/ContrasenaView";
+
+
+
 function App() {
   return (
-    <CarritoContextProvider>
-      <Router>
-        <Navigation />
-        <Routes>
-          <Route path="*" element={<NotFoundView />} />
-          <Route path="/carrito" element={<CarritoView />} />
-          <Route path="/productos" element={<ProductosListaView />} />
-          <Route
-            path="/detalleproducto/:id"
-            element={<ProductoComprarView />}
-          />
-        </Routes>
-      </Router>
-    </CarritoContextProvider>
+    <AuthProvider>
+      <CarritoContextProvider>
+        <Router>
+          <Navigation />
+          <Routes>
+            <Route path="*" element={<NotFoundView />} />
+            <Route path="/carrito" element={<CarritoView />} />
+            <Route path="/productos" element={<ProductosListaView />} />
+            <Route
+              path="/detalleproducto/:id"
+              element={<ProductoComprarView />}
+            />
+            <Route
+              path="/ContrasenaOlvidada"
+              element={<ContrasenaView />}
+            />
+            <Route path="/checkout" element={
+              
+                <Boleta/>
+              
+            }/>
+            <Route path="/login" element={
+              <PrivateRoute>
+                <LoginView />
+              </PrivateRoute>} />
+              <Route path="/register" element={
+              <PrivateRoute>
+                <RegisterView/>
+               
+              </PrivateRoute>} />
+          </Routes>
+        </Router>
+      </CarritoContextProvider>
+    </AuthProvider>
   );
 }
 

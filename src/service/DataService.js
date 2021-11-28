@@ -1,7 +1,7 @@
 import axios from "axios";
 
 //esta url e de mocp api
-const URL = "https://616b5ec016c3fa0017171694.mockapi.io/Productos";
+const URL = `${process.env.REACT_APP_API}Productos`;
 
 const LaData = async () => {
   try {
@@ -28,4 +28,6 @@ const obtenerProductoPorId = async (id) => {
       throw error;
   }
 };
+
+
 export {LaData,obtenerProductosPorPagina,obtenerProductoPorId}
