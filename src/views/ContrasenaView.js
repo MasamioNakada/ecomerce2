@@ -44,14 +44,14 @@ export default function ContrasenaView() {
       </div> 
 
       <form onSubmit={handleSubmit} className="col-lg-3 col-md-6 col-9  mt-3 ">
-        <div class="col-lg-12">
-          <label for="inputEmail4" class="form-label">
+        <div className="col-lg-12">
+          <label for="inputEmail4" className="form-label">
             Email
           </label>
           <input
             type="email"
             name="email"
-            class="form-control"
+            className="form-control"
             id="inputEmail4  "
             placeholder="Ingrese email"
             value={form.email}

@@ -70,14 +70,14 @@ export default function LoginView() {
       </div>
 
       <form onSubmit={handleSubmit} className="col-lg-3 col-md-6 col-9  ">
-        <div class="col-lg-12">
-          <label for="inputEmail4" class="form-label">
+        <div className="col-lg-12">
+          <label for="inputEmail4" className="form-label">
             Email
           </label>
           <input
             type="email"
             name="email"
-            class="form-control"
+            className="form-control"
             id="inputEmail4  "
             placeholder="Ingrese email"
             value={form.email}
@@ -85,14 +85,14 @@ export default function LoginView() {
             autoComplete="off"
           />
         </div>
-        <div class="col-lg-12">
-          <label for="inputPassword4" name="password" class="form-label">
+        <div className="col-lg-12">
+          <label for="inputPassword4" name="password" className="form-label">
             Password
           </label>
           <input
             type="password"
             name="password"
-            class="form-control"
+            className="form-control"
             id="inputPassword4"
             placeholder="Ingrese su contraseña"
             value={form.password}

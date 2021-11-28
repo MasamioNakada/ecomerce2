@@ -61,7 +61,7 @@ export default function CheckOutView() {
 
   return (
     <div className="container mt-4">
-      <h1><i class="fas fa-user-lock mb-4"></i> COMPRA SEGURA</h1>
+      <h1><i className="fas fa-user-lock mb-4"></i> COMPRA SEGURA</h1>
       <div className="row my-2">
         <div className="col-12 col-md-6">
           <h5>Verifique el carrito</h5>
@@ -145,7 +145,7 @@ export default function CheckOutView() {
             </div>
             <label className="form-label">Departamento</label>
             <div className="mb-2">
-              <select class="form-select" aria-label="Default select example" {...register("departamento", { required: true })}>
+              <select className="form-select" aria-label="Default select example" {...register("departamento", { required: true })}>
                 <option selected>Seleccionar</option>
                 <option value="1">Lima</option>
                 <option value="2">Callao</option>

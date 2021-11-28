@@ -25,7 +25,7 @@ export default function CarritoView() {
       <div className="container">
         <div className="my-4 text-center">
           <h1 className="fw-bold">
-            <i class="fab fa-shopify me-2"></i>
+            <i className="fab fa-shopify me-2"></i>
             Tu Carrito de compras
           </h1>
         </div>
@@ -35,7 +35,7 @@ export default function CarritoView() {
               <h1>Carrito Vacio!</h1>
             </div>
             <div className="fs-1 d-flex justify-content-center my-4">
-              <i class="far fa-sad-tear text-danger"></i>
+              <i className="far fa-sad-tear text-danger"></i>
             </div>
           </div>
         ) : (
