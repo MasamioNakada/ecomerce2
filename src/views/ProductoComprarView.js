@@ -3,6 +3,7 @@ import { useState, useEffect, useContext } from "react";
 import { useParams } from "react-router";
 import { obtenerProductoPorId } from "../service/DataService";
 import ReactImageMagnify from "react-image-magnify";
+import { Link, useNavigate } from "react-router-dom";
 import { CarritoContext } from "../context/carritoContext";
 import "../css/VistaProduct.css"
 const ProductoComprarView = () => {
@@ -98,10 +99,10 @@ const ProductoComprarView = () => {
               >
                 <i className="fas fa-cart-plus"></i> Agregar a carrito
               </button>
+              <Link to="/checkout" onClick={anadirCarritoContext} className="btn btn-outline-success px-4 py-2 ms-3">
+              Comprar Ya! 
+              </Link>
            
-            <button className="btn btn-outline-success px-4 py-2 ms-3 ">
-              Comprar Ya!
-            </button>
           </div>
         </div>
       ) : null}

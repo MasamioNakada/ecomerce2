@@ -48,7 +48,7 @@ export default function CheckOutView() {
           icon: "error",
           title: "Oops...",
           text: "Necesitas estar logueado!",
-          footer: '<a href="">Why do I have this issue?</a>',
+          footer: 'Te recomendamos ver las politicas de privacidad',
         });
         navigate("/Login");
       }
@@ -95,7 +95,8 @@ export default function CheckOutView() {
         {/* formulario */}
         <div className="col-12 col-md-6">
           <form onSubmit={handleSubmit(recibirSubmit)}>
-            <div className="mb-2">
+            <div className="mb-2">{
+            currentUser === null ? (<h4 className="text-warning">'Recuerda que debes iniciar sesion para efectuar la comprar'</h4>) : ""}
               <label className="form-label">Nombres y Apellidos</label>
               <input
                 type="text"
@@ -171,7 +172,7 @@ export default function CheckOutView() {
 
             <button
               type="submit"
-              className="btn btn-dark btn-lg"
+              className="btn btn-dark btn-lg mb-3"
               disabled={carrito.length <= 0}
             >
               Comprar
