@@ -50,14 +50,14 @@ export default function RegisterView() {
 
   return (
     <div className="container">
-      <div className="row mt-3 d-flex justify-content-center mt-5">
+      <div className="row my-5 d-flex justify-content-center mt-5">
         <div>
           <h1 className="text-center">Registrar</h1>
         </div>
 
         <form
           onSubmit={handleSubmit}
-          className="col-lg-3 col-md-6 col-9  mt-3 "
+          className="col-lg-3 col-md-6 col-9  my-3 "
         >
           <div class="col-lg-12">
             <label for="inputEmail4" class="form-label">
