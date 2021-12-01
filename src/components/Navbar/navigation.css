@@ -1,3 +1,24 @@
 div {
     font-family: 'Space Mono', monospace;
 }
+
+p {
+    padding-top: 10px;
+    transition: background-color .5s;
+    border-radius: 60px;
+}
+
+#brand {
+    transition: background-color .5s;
+    border-radius: 60px;
+}
+
+#brand:hover {
+box-shadow:  35px -35px 100px #cfd3d7,
+             -35px 35px 100px #f9fdff;
+}
+
+p:hover {
+    box-shadow:  35px -35px 100px #cfd3d7,
+    -35px 35px 100px #f9fdff;
+}

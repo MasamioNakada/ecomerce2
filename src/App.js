@@ -19,7 +19,8 @@ import RutaPrivadaUser from "./components/RutaPrivadaUser";
 import ContrasenaView from "./views/ContrasenaView";
 import CheckOutView from "./views/CheckOutView";
 import Footer from "./components/Footer";
-
+import HomeView from "./views/HomeView"
+import FooterView from "./views/FooterView"
 
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
           
           <Routes>
             <Route path="*" element={<NotFoundView />} />
+            <Route path="/home" element={<HomeView />} />
             <Route path="/carrito" element={<CarritoView />} />
             <Route path="/productos" element={<ProductosListaView />} />
             <Route
@@ -56,6 +58,7 @@ function App() {
                
               </PrivateRoute>} />
           </Routes>
+          <FooterView />
           <Footer/>
         </Router>
       </CarritoContextProvider>
