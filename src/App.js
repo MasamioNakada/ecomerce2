@@ -14,10 +14,11 @@ import PrivateRoute from "./components/PrivateRoute";
 
 import LoginView from "./views/LoginView";
 import RegisterView from "./views/RegisterView";
-import { useContext } from "react";
+
 import RutaPrivadaUser from "./components/RutaPrivadaUser";
 import ContrasenaView from "./views/ContrasenaView";
 import CheckOutView from "./views/CheckOutView";
+import Footer from "./components/Footer";
 
 
 
@@ -27,6 +28,7 @@ function App() {
       <CarritoContextProvider>
         <Router>
           <Navigation />
+          
           <Routes>
             <Route path="*" element={<NotFoundView />} />
             <Route path="/carrito" element={<CarritoView />} />
@@ -54,6 +56,7 @@ function App() {
                
               </PrivateRoute>} />
           </Routes>
+          <Footer/>
         </Router>
       </CarritoContextProvider>
     </AuthProvider>

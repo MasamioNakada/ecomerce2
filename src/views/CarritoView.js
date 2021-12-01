@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { CarritoContext } from "../context/carritoContext";
 import Swal from "sweetalert2";
-
+import "../css/hvh.css"
 import { Link } from "react-router-dom";
 
 export default function CarritoView() {
@@ -22,7 +22,7 @@ export default function CarritoView() {
   console.log(carrito);
   return (
     <>
-      <div className="container">
+      <div className="container" id="hvh">
         <div className="my-4 text-center">
           <h1 className="fw-bold">
             <i className="fab fa-shopify me-2"></i>

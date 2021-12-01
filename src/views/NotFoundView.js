@@ -1,8 +1,8 @@
 import search from "../assets/search.svg"
-
+import "../css/hvh.css"
 export default function NotFoundView() {
     return (
-        <div className="container">
+        <div className="container" id="hvh">
             <div className='row d-flex justify-content-center align-items-center text-center'>
 
             <div className="col-lg-6 ">

@@ -1,18 +1,19 @@
 import React, { useState,useEffect } from "react";
 import {  obtenerProductosPorPagina } from "../service/DataService";
 import ProductoCard from "../components/ProductoCard";
-
-
+import Cargando from "../components/Cargando";
+import "../css/hvh.css"
 export default function ProductosListaView() {
   const [productos, setProductos] = useState([]);
   const [pagina, setPagina] = useState(1);
   const [limite, setLimite] = useState(6);
-
+  const [loading,setLoading]= useState(true)
   const getProductos = async () => {
       try {
           const prodObtenidos = await obtenerProductosPorPagina(pagina, limite);
           // setProductos(prodObtenidos);
           setProductos([...productos, ...prodObtenidos]);
+          setLoading(false)
       } catch (error) {
           console.log(error);
       }
@@ -23,8 +24,10 @@ export default function ProductosListaView() {
 
   return (
     <>
-      
-        <div className="container mb-5 mt-5">
+       {loading === true ? (
+                <Cargando />
+            ) : (
+        <div className="container mb-5 mt-5" id="hvh">
           <div className="row">
             {productos.map((item, i) => {
               return (
@@ -44,7 +47,7 @@ export default function ProductosListaView() {
                 </button>
                 
             </div>
-        </div>
-    </>
-  );
+        </div>)}
+  
+    </>)
 }

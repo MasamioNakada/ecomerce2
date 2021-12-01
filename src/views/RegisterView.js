@@ -2,7 +2,7 @@ import React, { useState, useContext } from "react";
 import Swal from "sweetalert2";
 import { AuthContext } from "../context/AuthContext";
 import { Link, useNavigate } from "react-router-dom";
-
+import Cargando from "../components/Cargando";
 export default function RegisterView() {
   const navigate = useNavigate();
   const { signup } = useContext(AuthContext);
@@ -23,9 +23,10 @@ export default function RegisterView() {
   async function handleSubmit(e) {
     e.preventDefault();
 
+    setLoading(true);
     try {
-      setLoading(true);
       await signup(form.email, form.password);
+      setLoading(false);
       await Swal.fire({
         icon: "success",
         title: "Éxito",
@@ -43,12 +44,17 @@ export default function RegisterView() {
         showConfirmButton: false, //es para que no me muestre un boton de cierre
         timer: 2000, //ms
       });
+      setLoading(false);
     }
 
     setLoading(false);
   }
 
   return (
+    <>
+      {loading === true ? (
+        <Cargando />
+      ) : (
     <div className="container">
       <div className="row my-5 d-flex justify-content-center mt-5">
         <div>
@@ -109,6 +115,7 @@ export default function RegisterView() {
           </div>
         </form>
       </div>
-    </div>
+    </div>)}
+    </>
   );
 }
