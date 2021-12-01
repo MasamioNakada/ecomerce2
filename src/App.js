@@ -31,8 +31,8 @@ function App() {
           <Navigation />
           
           <Routes>
-            <Route path="*" element={<NotFoundView />} />
             <Route path="/home" element={<HomeView />} />
+            <Route path="*" element={<NotFoundView />} />
             <Route path="/carrito" element={<CarritoView />} />
             <Route path="/productos" element={<ProductosListaView />} />
             <Route
