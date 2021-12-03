@@ -20,7 +20,18 @@ import ContrasenaView from "./views/ContrasenaView";
 import CheckOutView from "./views/CheckOutView";
 import Footer from "./components/Footer";
 import HomeView from "./views/HomeView"
-import FooterView from "./views/FooterView"
+import Contacto from "./views/Contacto"
+
+//extrasviwe
+import Aboutview from "./extra/Aboutview"
+import CambioyDevolucionesview from "./extra/CambioyDevolucionesview"
+import ComoComprarview from "./extra/ComoComprarview"
+import Contactoview from "./extra/Contactoview"
+import Enviosview from "./extra/Enviosview"
+import Legalesview from "./extra/Legalesview"
+import Metodospago from "./extra/Metodospago"
+import Cookies from "./extra/Cookies";
+import Preguntasfrecuentes from "./extra/Preguntasfrecuentes"
 
 
 function App() {
@@ -36,6 +47,17 @@ function App() {
             <Route path="*" element={<NotFoundView />} />
             <Route path="/carrito" element={<CarritoView />} />
             <Route path="/productos" element={<ProductosListaView />} />
+            //extra
+            <Route path="/about" element={<Aboutview />} />
+            <Route path="/cambios-y-devoluciones" element={ <CambioyDevolucionesview />} />
+            <Route path="/como-comprar" element={ <ComoComprarview />} />
+            <Route path="/contacto" element={ <Contactoview />} />
+            <Route path="/envios" element={ <Enviosview />} />
+            <Route path="/legales-generales" element={ <Legalesview />} />
+            <Route path="/metodos-de-pago" element={ <Metodospago />} />
+            <Route path="/politica-de-cookies" element={ <Cookies />} />
+            <Route path="/preguntas-frecuentes" element={<Preguntasfrecuentes />} />
+
             <Route
               path="/detalleproducto/:id"
               element={<ProductoComprarView />}
@@ -59,7 +81,7 @@ function App() {
                
               </PrivateRoute>} />
           </Routes>
-          <FooterView />
+          <Contacto/>       
           <Footer/>
         </Router>
       </CarritoContextProvider>

@@ -55,8 +55,8 @@ function Navigation() {
 
   return (
     <div>
-      <Navbar bg="light" expand="md">
-        <Container className="justify-content-between">
+      <Navbar bg="light" expand="md" id="navbar">
+        <Container className="justify-content-between" >
           <Navbar.Brand>
             <Link className="nav-link text-dark" to="/home">
               <a id="brand">Wiki</a>
@@ -78,15 +78,15 @@ function Navigation() {
 
             <Nav  className="m-auto ">
               <Link className="nav-link" to="/home">
-                <p> Home</p>
+                <p id="nav"> Home</p>
               </Link>
               <Link className="nav-link" to="/productos">
-                <p>Productos </p>
+                <p id="nav">Productos </p>
               </Link>
 
 
               <Link className="nav-link d-flex  flex-row " to="/carrito">
-                <p> Carrito</p>
+                <p id="nav"> Carrito</p>
                 {totalCarrito === 0 ? (
                   ""
                 ) : (
@@ -96,7 +96,7 @@ function Navigation() {
                 )}
               </Link>
               <Link className="nav-link" to="/checkout">
-                <p>Comprar</p>
+                <p id="nav">Comprar</p>
               </Link>
             </Nav>
 

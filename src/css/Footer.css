@@ -6,3 +6,10 @@
     bottom: 0;
     width: 100%;
   }
+
+.linkfooter {
+  color: inherit;
+  text-decoration: inherit;
+/*   padding: inherit;
+  margin: inherit; */
+}
